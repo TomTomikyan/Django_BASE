@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Category</h1>
+    {% for i in cat_list %}
+        <a href="{% url 'prod' i.id %}">
+            <img src="{{ i.img.url }}" alt="" >
+        </a>
+        <p>{{ i.name }}</p>
+    {% endfor %}
+</body>
+</html>
